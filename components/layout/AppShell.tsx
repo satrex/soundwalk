@@ -42,6 +42,7 @@ export function AppShell({ children }: AppShellProps) {
           >
             街に音楽が溢れるアプリ
           </Link>
+          ※ これは開発途中のデモです（スマホ推奨）
 
           {/* デスクトップナビ */}
           <nav className="hidden md:flex items-center gap-3 text-xs">
