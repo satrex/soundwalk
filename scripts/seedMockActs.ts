@@ -1,4 +1,6 @@
 // scripts/seedMockActs.ts
+import dotenv from "dotenv";
+dotenv.config({ path: ".env.local" }); // ← .env ではなく .env.local を読む
 import { createClient } from "@supabase/supabase-js";
 
 type ActSeed = {
@@ -26,7 +28,7 @@ async function main() {
 
   // 1. 適当な owner_profile_id を1件だけ取る（基本はあなたのプロフィール）
   const { data: profiles, error: profilesError } = await supabase
-    .from("musician_profiles")
+    .from("musicians")
     .select("id")
     .limit(1);
 

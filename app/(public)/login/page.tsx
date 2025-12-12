@@ -30,9 +30,8 @@ export default function LoginPage() {
         return;
       }
 
-      // ログイン成功 → role を見てリダイレクト先を決める
-      router.push('/musician');
-      
+      router.push("/dashboard"); 
+
     } catch (e: any) {
       console.error(e);
       setError('ログインに失敗しました。時間をおいて再度お試しください。');
